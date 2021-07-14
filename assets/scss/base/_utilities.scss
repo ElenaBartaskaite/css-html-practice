@@ -1,0 +1,81 @@
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+}
+
+.relative {
+  position: relative;
+}
+
+//MARGINS:
+.margin-top-16 {
+  margin-top: 16px;
+}
+
+.margin-top-24 {
+  margin-top: 24px;
+}
+
+.margin-top-40 {
+  margin-top: 40px;
+}
+
+.margin-top-120 {
+  margin-top: 120px;
+}
+
+.margin-bottom-24 {
+  margin-bottom: 24px;
+}
+
+.margin-bottom-80 {
+  margin-bottom: 80px;
+}
+
+//WIDTH-PRESENTAGE
+.width-55 {
+  width: 55%;
+}
+
+.width-45 {
+  width: 45%;
+}
+
+//BACKGROUND COLORSf
+.pink-background {
+  background-color: $color-pink-gray;
+}
+
+@include respond(tab-land) {
+  .width-55 {
+    width: 65%;
+  }
+}
+
+@include respond(tab-land-small) {
+  .width-55 {
+    width: 75%;
+  }
+
+  .width-45 {
+    width: 55%;
+  }
+}
+
+@include respond(tab-port) {
+  .margin-top-120 {
+    margin-top: 80px;
+  }
+}
+
+@include respond(phone-land) {
+  .width-55 {
+    width: 100%;
+  }
+
+  .width-45 {
+    width: 100%;
+  }
+}

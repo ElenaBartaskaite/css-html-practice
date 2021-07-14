@@ -1,0 +1,32 @@
+.button-purple {
+    @extend .button-text;
+    border-radius: 5px;
+    background-color: $color-purple;
+    padding: 8px 30px;
+    border: none;
+    color: $color-white;
+    font-size: $f-size-btn1;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-purple-hover;
+    }
+}
+
+.button-purple-25 {
+    @extend .button-purple;
+    padding: 18px 25px;
+}
+
+.button-white {
+    @extend .button-text;
+    border: none;
+    color: $color-purple;
+    font-size: $f-size-btn2;
+    background-color: $color-white;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-purple-hover;
+    }
+}

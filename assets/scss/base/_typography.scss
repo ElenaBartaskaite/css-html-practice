@@ -1,0 +1,40 @@
+body {
+  font-family: $font-main;
+  font-weight: $f-regular;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  letter-spacing: -0.5px;
+  color: $text-black;
+}
+
+h1 {
+  font-size: $f-size-h1;
+  line-height: 78px;
+}
+
+h2 {
+  font-size: $f-size-h2;
+  line-height: 68px;
+}
+
+h3 {
+  font-size: $f-size-h3;
+}
+
+.button-text {
+  font-family: $font-main;
+  font-size: 16px;
+}
+
+.secondary-text {
+  font-size: $f-size-p1;
+  opacity: 0.5;
+  font-family: $font-secondary;
+}
+
+@include respond(tab-port) {
+  h1 {
+    font-size: $f-size-h2;
+    line-height: 68px;
+  }
+}

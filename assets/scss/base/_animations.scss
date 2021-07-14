@@ -1,0 +1,12 @@
+// -----------------------------------------------------------------------------
+// This file contains all @keyframes declarations, if any.
+// -----------------------------------------------------------------------------
+
+@keyframes movement-right {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(5px, 0);
+    }
+}

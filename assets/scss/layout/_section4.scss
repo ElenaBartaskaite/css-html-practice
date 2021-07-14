@@ -1,0 +1,105 @@
+.review-columns {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 30px;
+}
+
+.review-container {
+    position: relative;
+}
+
+.review-container1 {
+    @extend .review-container;
+    justify-self: end;
+    display: flex;
+    justify-content: end;
+    align-self: start;
+}
+
+.review-container2 {
+    @extend .review-container;
+    margin-top: 120px;
+    align-self: end;
+}
+
+.review {
+    background-color: $color-white;
+    border-radius: 10px;
+    padding: 32px;
+    width: 80%;
+    position: relative;
+    z-index: 1;
+    max-width: 418px;
+    min-width: 410px;
+}
+
+.name {
+    font-size: $f-size-p2;
+}
+
+.time {
+    opacity: 0.5;
+    font-size: $f-size-p3;
+}
+
+.review-dots {
+    position: absolute;
+    z-index: 0;
+}
+
+.review-dots1 {
+    @extend .review-dots;
+    top: 161px;
+    left: -49px;
+}
+
+.review-dots2 {
+    @extend .review-dots;
+    top: -33px;
+    left: 304px;
+}
+
+@include respond(tab-land-small) {
+    .review-columns {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .review {
+        max-width: 380px;
+        min-width: 370px;
+    }
+
+    .review-dots1 {
+        top: 191px;
+        left: -56px;
+    }
+
+    .review-dots2 {
+        top: -37px;
+        left: 256px;
+    }
+}
+
+@include respond(phone-land) {
+    .review-columns {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+    }
+}
+
+@include respond(phone) {
+    .review {
+        width: 80%;
+        max-width: 300px;
+        min-width: 290px;
+    }
+
+    .review-dots1 {
+        top: 184px;
+        left: -35px;
+    }
+
+    .review-dots2 {
+        left: 165px;
+    }
+}

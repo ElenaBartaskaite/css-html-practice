@@ -1,0 +1,54 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+  min-width: 360px;
+}
+
+ul li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  color: $text-black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+section {
+  padding: 100px $page-padding;
+}
+
+@include respond(smaller-desktop) {
+  section {
+    padding: 100px $page-padding-smaller-desktop;
+  }
+}
+
+@include respond(tab-port) {
+  section {
+    padding: 50px $page-padding-tab-port;
+  }
+}
+
+@include respond(phone) {
+  section {
+    padding: 30px $page-padding-phone;
+  }
+}

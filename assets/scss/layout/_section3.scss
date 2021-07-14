@@ -1,0 +1,114 @@
+.purple-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.bubble {
+    background-color: $color-purple;
+    border-radius: 79px;
+    color: $color-white;
+    padding: 32px 0;
+    width: 252px;
+    height: 163px;
+
+    display: flex;
+    align-items: center;
+
+    div {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    p:nth-child(1) {
+        font-size: $f-size-h2;
+        margin-bottom: 8px;
+    }
+
+    p:nth-child(2) {
+        font-size: $f-size-p2;
+        white-space: nowrap;
+    }
+}
+
+.bubble-top {
+    @extend .bubble;
+    justify-self: end;
+    border-top-right-radius: 5px;
+}
+
+.bubble-bottom {
+    @extend .bubble;
+    border-bottom-left-radius: 5px;
+}
+
+.font-size-24 {
+    font-size: $f-size-h3;
+}
+
+.section3-two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 90px;
+}
+
+@include respond(smaller-desktop) {
+    .section3-two-columns {
+        column-gap: 30px;
+    }
+}
+
+@include respond(tab-land) {
+    .section3-two-columns {
+        grid-template-columns: 40% 1fr;
+    }
+
+    .companies {
+        width: 100%;
+    }
+}
+
+@include respond(tab-land-small) {
+    .section3-two-columns {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        row-gap: 50px;
+    }
+
+    .companies {
+        width: 100%;
+    }
+
+    .purple-table {
+        grid-row-start: 1;
+    }
+}
+
+@include respond(phone-land) {
+    .bubble {
+        padding: 32px 0;
+        width: 200px;
+        height: 163px;
+
+        p:nth-child(1) {
+            font-size: $f-size-h2-small;
+        }
+
+        p:nth-child(2) {
+            font-size: $f-size-p3;
+        }
+    }
+}
+
+@include respond(phone) {
+    .purple-table {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .center-phone {
+        text-align: center;
+    }
+}

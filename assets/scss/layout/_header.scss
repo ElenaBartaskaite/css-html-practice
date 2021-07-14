@@ -1,0 +1,85 @@
+.header {
+    @include flex-space-between;
+    padding: 26px 30px;
+    font-size: $f-size-p2;
+}
+
+.logo {
+    position: absolute;
+    top: 26px;
+    left: 30px;
+}
+
+.navigation {
+    @include flex-space-between;
+    padding-left: $page-padding - 30px;
+}
+
+.navigation-item {
+    margin-right: 30px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+    img {
+        margin-left: 9px;
+    }
+}
+
+.contact {
+    display: flex;
+    & > * {
+        margin: 0 9px;
+    }
+}
+
+.mail-link {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    img {
+        margin-right: 5px;
+    }
+}
+
+@include respond(smaller-desktop) {
+    .navigation {
+        padding-left: $page-padding-smaller-desktop - 30px;
+    }
+}
+
+@include respond(phone-land) {
+    .header {
+        flex-direction: column-reverse;
+    }
+
+    .contact {
+        padding-left: 50px;
+        margin-bottom: 20px;
+        justify-content: flex-end;
+    }
+
+    .navigation {
+        padding-left: 0;
+    }
+}
+
+@include respond(phone) {
+    .contact {
+        flex-wrap: wrap;
+    }
+
+    .mail-link {
+        order: 1;
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .logo {
+        width: 80px;
+        top: 35px;
+    }
+}
